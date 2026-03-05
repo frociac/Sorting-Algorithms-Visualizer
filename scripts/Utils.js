@@ -123,7 +123,18 @@ static #findLargestNumber(arr) {
    */
   static wait(ms) {
     return new Promise((resolve) => {
-      setTimeout(resolve, ms);
+      const timeoutId = setTimeout(() => {
+        clearInterval(intervalId);
+        resolve();
+      }, ms);
+
+      const intervalId = setInterval(() => {
+        if (!Algorithms.isRunning) {
+          clearTimeout(timeoutId);
+          clearInterval(intervalId);
+          resolve();
+        }
+      }, 10);
     });
   }
 }

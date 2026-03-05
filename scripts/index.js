@@ -54,11 +54,12 @@ document.addEventListener("DOMContentLoaded", () => {
   /** input handler */
   const elementsInput = document.getElementById("elements");
   const sizeInput = document.getElementById("size");
-  controlButton.addEventListener("click", (event) => {
+  controlButton.addEventListener("click", async (event) => {
     if (Options.has_started) {
       Options.has_started = false;
-      CanvasManager.setUpCanvas();
-      // CanvasManager.stop();
+      controlButton.disabled = true; 
+      await Algorithms.stop();
+      controlButton.disabled = false;
       controlButton.classList.add("clicked");
       controlButton.textContent = "Start Sort";
       pauseButton.classList.add("disabled");
