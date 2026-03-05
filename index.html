@@ -1,59 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorting Algorithms</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div id="container">
-      <div id="left">
-        <button class="choice-button" id="selection">Selection Sort</button>
-        <button class="choice-button" id="bubble">Bubble Sort</button>
-        <button class="choice-button" id="insertion">Insertion Sort</button>
-        <button class="choice-button" id="merge">Merge Sort</button>
-        <button class="choice-button WIP" id="quick">Quick Sort</button>
-        <button class="choice-button WIP" id="heap">Heap Sort</button>
-        <button class="choice-button WIP" id="shell">Shell Sort</button>
-        <button class="choice-button" id="bogo">Bogo Sort</button>
-        <button class="choice-button WIP" id="random">Random Sort</button>        
-      </div>
-      <div id="center">
-        <canvas id="canvas" width="800" height="400"></canvas>
-        <div id="options-div">
-          <div id="start-pause">
-            <button id="start-end" class="choice-button clicked disabled">Start Sort</button>
-            <button id="pause" class="choice-button disabled">Pause</button>
-          </div>
-          <div>
-            <form id="input">
-              <div id="elements-input">
-                <input type="text" placeholder="300 150 200 100 50" id="elements" name="elements"> 
-                <label for="elements">List of Heights (space separated or leave blank for random)</label>
-              </div>
-              <div id="size-input">
-                <input type="number" step="1" placeholder="5" id="size" name="size">
-                <label for="size">Number of Elements to be sorted</label>
-              </div>
-            </form>
-          </div>
-          <div id="slider-container">
-            <input type="range" min="0" max="1000" value="250" class="slider" id="speed">
-            <p id="slider-value">Step speed (ms): <span id="value-display">250</span></p>
-          </div>
-        </div>
-      </div>
-      <div id="right"></div>
-    </div>
-    <script src="scripts/index.js"></script>
-    <script src="scripts/ArrayData.js"></script>
-    <script src="scripts/CanvasManager.js"></script>
-    <script src="scripts/Algorithms.js"></script>
-    <script src="scripts/Utils.js"></script>
-    <script src="scripts/Options.js"></script>
-  </body>
-
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sorting Algorithms</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div id="container">
+			<div id="left">
+				<button class="choice-button" id="selection">Selection Sort</button>
+				<button class="choice-button" id="bubble">Bubble Sort</button>
+				<button class="choice-button" id="insertion">Insertion Sort</button>
+				<button class="choice-button" id="merge">Merge Sort</button>
+				<button class="choice-button WIP" id="quick">Quick Sort</button>
+				<button class="choice-button WIP" id="heap">Heap Sort</button>
+				<button class="choice-button WIP" id="shell">Shell Sort</button>
+				<button class="choice-button" id="bogo">Bogo Sort</button>
+				<button class="choice-button WIP" id="random">Random Sort</button>
+			</div>
+			<div id="center">
+				<canvas id="canvas" width="800" height="400"></canvas>
+				<div id="options-div">
+					<div id="start-pause">
+						<button id="start-end" class="choice-button clicked disabled">Start Sort</button>
+						<button id="pause" class="choice-button disabled">Pause</button>
+					</div>
+					<div>
+						<form id="input">
+							<div id="elements-input">
+								<input type="text" placeholder="300 150 200 100 50" id="elements" name="elements" />
+								<label for="elements">List of Heights (space separated or leave blank for random)</label>
+							</div>
+							<div id="size-input">
+								<input type="number" step="1" placeholder="5" id="size" name="size" />
+								<label for="size">Number of Elements to be sorted</label>
+							</div>
+						</form>
+					</div>
+					<div id="slider-container">
+						<input type="range" min="0" max="1000" value="250" class="slider" id="speed" />
+						<p id="slider-value">Step speed (ms): <span id="value-display">250</span></p>
+					</div>
+				</div>
+			</div>
+			<div id="right"></div>
+		</div>
+		<script src="scripts/index.js"></script>
+		<script src="scripts/ArrayData.js"></script>
+		<script src="scripts/CanvasManager.js"></script>
+		<script src="scripts/Algorithms.js"></script>
+		<script src="scripts/Utils.js"></script>
+		<script src="scripts/Options.js"></script>
+	</body>
 </html>

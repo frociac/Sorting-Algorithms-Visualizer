@@ -1,183 +1,181 @@
 :root {
-  --red: #f94a4a;
-  --green: #4CAF50;
-  --disabledRed: #e89999;
-  --disabledGreen: #97a997;
-  --disabledPurple: rgb(116, 86, 116);
-  --pause: rgb(55, 30, 30);
-  --disabledPause: rgb(61, 52, 52);
+	--red: #f94a4a;
+	--green: #4caf50;
+	--disabledRed: #e89999;
+	--disabledGreen: #97a997;
+	--disabledPurple: rgb(116, 86, 116);
+	--pause: rgb(55, 30, 30);
+	--disabledPause: rgb(61, 52, 52);
 }
 
 body {
-  background-color: rgb(61, 65, 64);
-  margin: 0; /* Reset default margin */
+	background-color: rgb(61, 65, 64);
+	margin: 0; /* Reset default margin */
 }
 
 #container {
-  display: flex;
-  height: 100vh;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: stretch;
-  text-align: center;
-  margin-top: 0.5%;
-  gap: 10px;
+	display: flex;
+	height: 100vh;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: stretch;
+	text-align: center;
+	margin-top: 0.5%;
+	gap: 10px;
 }
 
 #left {
-  display: flex;
-  flex: 2;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 1px;
-  gap: 3vh;
+	display: flex;
+	flex: 2;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 1px;
+	gap: 3vh;
 }
 
 #center {
-  flex: 8;
-  display: flex;
-  flex-direction: column;
+	flex: 8;
+	display: flex;
+	flex-direction: column;
 }
 
 #right {
-  flex: 2;
-  font-size: 23px;
-  font-family: 'Courier New', Courier, monospace;
-  color: white;
+	flex: 2;
+	font-size: 23px;
+	font-family: "Courier New", Courier, monospace;
+	color: white;
 }
 
 #random {
-  background-color: purple;
+	background-color: purple;
 }
 
 #options-div {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 #start-pause {
-  display: flex;
+	display: flex;
 }
 
 #input {
-  color: white;
-  display: flex;
-  justify-content: space-around;
+	color: white;
+	display: flex;
+	justify-content: space-around;
 }
 
 #elements-input {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 5px;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 5px;
 }
 
 #size-input {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 5px;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 5px;
 }
 
 #slider-container {
-  width: 100%;
-  color: white;
+	width: 100%;
+	color: white;
 }
 
 .slider {
-  appearance: none;
-  width: 100%;
-  height: 25px;
-  opacity: 0.7;
-  background: #04AA6D; 
-  cursor: pointer;
-  transition: opacity;
+	appearance: none;
+	width: 100%;
+	height: 25px;
+	opacity: 0.7;
+	background: #04aa6d;
+	cursor: pointer;
+	transition: opacity;
 }
 
 .slider:hover {
-  opacity: 1;
+	opacity: 1;
 }
 
 .choice-button {
-  width: 100%;
-  background-color: var(--red);
-  border: 1px solid #000;
-  text-align: center;
-  color: white;
-  font-size: 3vh;
-  padding: 5px 5px;
-  cursor: pointer;
+	width: 100%;
+	background-color: var(--red);
+	border: 1px solid #000;
+	text-align: center;
+	color: white;
+	font-size: 3vh;
+	padding: 5px 5px;
+	cursor: pointer;
 }
 
 .clicked {
-  background-color: var(--green);
+	background-color: var(--green);
 }
 
 .disabled {
-  cursor: not-allowed;
-  pointer-events: none;
+	cursor: not-allowed;
+	pointer-events: none;
 }
 
 .WIP {
-  cursor: not-allowed;
-  pointer-events: none;
+	cursor: not-allowed;
+	pointer-events: none;
 }
 
 .WIP.choice-button {
-  background-color: var(--disabledRed);
+	background-color: var(--disabledRed);
 }
 
 .WIP#random {
-  background-color: var(--disabledPurple);
+	background-color: var(--disabledPurple);
 }
 
 .disabled.choice-button {
-  background-color: var(--disabledRed);
+	background-color: var(--disabledRed);
 }
 
 .disabled#random {
-  background-color: var(--disabledPurple);
+	background-color: var(--disabledPurple);
 }
 
-
 .disabled.choice-button.clicked {
-  background-color: var(--disabledGreen);
+	background-color: var(--disabledGreen);
 }
 
 #pause {
-  background-color: var(--pause); 
+	background-color: var(--pause);
 }
 
 #pause.disabled.choice-button {
-  background-color: var(--disabledPause)
+	background-color: var(--disabledPause);
 }
 
 #header-container {
-  display: inline;
+	display: inline;
 }
 
 #title {
-  font-size: 40px;
-  font-family: Arial;
-  text-align: center;
+	font-size: 40px;
+	font-family: Arial;
+	text-align: center;
 }
 
-
 #canvas {
-  border: 1px solid #181818;
+	border: 1px solid #181818;
 }
 
 #sort {
-  position: fixed;
-  top: 62%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #4CAF50;
-  border: 1px solid #000;
-  color: white;
-  padding: 15px 26px;
-  font-size: 40px;
-  margin: 4px 2px;
-  cursor: pointer;
+	position: fixed;
+	top: 62%;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #4caf50;
+	border: 1px solid #000;
+	color: white;
+	padding: 15px 26px;
+	font-size: 40px;
+	margin: 4px 2px;
+	cursor: pointer;
 }
