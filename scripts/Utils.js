@@ -61,6 +61,7 @@ static #findLargestNumber(arr) {
     ArrayData.array[i2] = temp;
     await CanvasManager.draw();
     CanvasManager.swapPositions = [];
+    await CanvasManager.draw();
   }
 
   /**
@@ -73,6 +74,7 @@ static #findLargestNumber(arr) {
     CanvasManager.comparePositions = [i1, i2];
     await CanvasManager.draw();
     CanvasManager.comparePositions = [];
+    await CanvasManager.draw();
     if (ArrayData.array[i2] > ArrayData.array[i1]) return -1;
     else if (ArrayData.array[i2] === ArrayData.array[i1]) return 0;
     else return 1;
