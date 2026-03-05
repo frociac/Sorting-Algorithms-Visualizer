@@ -166,46 +166,42 @@ class Algorithms {
     yield* this.#merge(start, mid, end);
   }
 
+  /**
+   * Performs an In-Place Merge.
+   */
   static async *#merge(start, mid, end) {
+    let rightStart = mid + 1;
+
     CanvasManager.subArrayPositions = Utils.generateRangedArray(start, end);
     await CanvasManager.draw();
     yield;
 
-    let left = ArrayData.array.slice(start, mid + 1);
-    let right = ArrayData.array.slice(mid + 1, end + 1);
+    if ((await Utils.compare(mid, rightStart)) <= 0) {
+      CanvasManager.subArrayPositions = [];
+      return;
+    }
 
-    let i = 0;
-    let j = 0;
-    let k = start;
-
-    while (i < left.length && j < right.length) {
-      if (left[i] <= right[j]) {
-        ArrayData.array[k] = left[i];
-        i++;
+    while (start <= mid && rightStart <= end) {
+      if ((await Utils.compare(start, rightStart)) <= 0) {
+        start++;
       } else {
-        ArrayData.array[k] = right[j];
-        j++;
+        let currentIndex = rightStart;
+
+        while (currentIndex !== start) {
+          await Utils.swap(currentIndex, currentIndex - 1);
+          currentIndex--;
+
+          await CanvasManager.draw();
+          yield;
+        }
+
+        start++;
+        mid++;
+        rightStart++;
       }
-      await CanvasManager.draw();
-      yield;
-      k++;
     }
 
-    while (i < left.length) {
-      ArrayData.array[k] = left[i];
-      i++;
-      k++;
-      await CanvasManager.draw();
-      yield;
-    }
-
-    while (j < right.length) {
-      ArrayData.array[k] = right[j];
-      j++;
-      k++;
-      await CanvasManager.draw();
-      yield;
-    }
     CanvasManager.subArrayPositions = [];
+    await CanvasManager.draw();
   }
 }
