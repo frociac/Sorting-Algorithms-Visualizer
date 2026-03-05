@@ -31,7 +31,7 @@ This website employs JavaScript canvas to provide a display of some of the most 
 ### TODO
 
 - [ ] Implement other sorting algorithms (and add to the list)
-- [-] Asynchronous Abort
+- [x] Asynchronous Abort
   - Multiple bugs if you attempt to prematurely end sort
   - One option is to just force a refresh to the page
 - [ ] Detailed Explanation on each algorithm
