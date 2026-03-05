@@ -37,5 +37,15 @@ This website employs JavaScript canvas to provide a display of some of the most 
 - [ ] Detailed Explanation on each algorithm
 - [ ] More control over simulation speed
   - Individually change comparison, swap, and sorted speeds
-- [ ] Optimize Drawing
+- [] Pausing
+- [] Output Final List
+- [] No Visualization Mode
+- [] Timer
+- [] Random
+- [x] Optimize Drawing
   - Not necessary to draw entire canvas every time
+- [] Update README
+  - Design Decisions
+- [] Update Visuals
+- [] Sounds
+- [] Bundler
